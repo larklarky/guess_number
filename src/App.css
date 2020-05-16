@@ -2,37 +2,99 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  margin: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 30px 30px 70% 150px;
+  row-gap: 15px;
+  column-gap: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.round {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  font-weight: bold;
+  font-size: 18px;
+  color: #312F2F;
+}
+
+.target-number {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  font-weight: bold;
+  font-size: 18px;
+  color: #4A4A4A;
+}
+
+.computer {
+  grid-column: 2 / 3;
+  grid-row: 3;
+  border: solid 1px gray;
+  max-width: 300px;
+  background-color: honeydew;
+  margin-left: 30px;
+  
+}
+
+.user {
+  grid-column: 3 /4;
+  grid-row: 3;
+  border: gray solid 1px;
+  max-width: 300px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.next-round {
+  grid-column: 2 / 4;
+  grid-row: 4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  height: 130px;
+  width: 70px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+  border: none;
+  font-weight: bold;
+}
+
+.submit {
+  background-color: white;
+  border: 2px solid #4CAF50;;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.control-left {
+  background-color: honeydew;
+  padding: 8px 20px;
+  border-radius: 20px 0px 0px 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.control-right {
+  background-color: honeydew;
+  padding: 8px 20px;
+  border-radius: 0px 20px 20px 00px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h1 {
+  padding: 50px;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
